@@ -14,7 +14,7 @@ int main() {
     printf("fahrenheit\tcelsius\n");
     while (fahrenheit <= upper) {
         celsius = 5 * (fahrenheit - 32) / 9;
-        printf("%d\t\t%d\n", fahrenheit, celsius);
+        printf("%3d\t\t%3d\n", fahrenheit, celsius);
         fahrenheit = fahrenheit + step;
     }
     return 0;
