@@ -30,7 +30,7 @@ int main() {
     */    
     int fahrenheit;
     float celsius;
-printf("fahrenheit\tcelsious\n");
+    printf("fahrenheit\tcelsious\n");
     for (fahrenheit = 300; fahrenheit >= 0; fahrenheit = fahrenheit - 20) {
         celsius = (5.0 / 9.0) * (fahrenheit - 32);
         printf("%3d\t\t%6.1f\n", fahrenheit, celsius);
