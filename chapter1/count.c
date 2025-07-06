@@ -13,9 +13,10 @@ int main() {
     //printf("Number character: %d\n", nc);
 
     /*Line counting*/
-    int nl = 0;
+    int c, nl;
+    nl = 0;
     while ((c = gechar()) != EOF) {
-        if (c == "\n") {
+        if (c == '\n') {
             ++nl;
         }
     }
