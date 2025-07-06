@@ -10,16 +10,24 @@ int main() {
     // while (getchar() != EOF) {
         // ++nc;
     // }
-    //printf("Number character: %d\n", nc);
+    //printf("Number characters: %d\n", nc);
 
     /*Line counting*/
-    int c, nl;
-    nl = 0;
+    int c, nb, nt, nl;
+    nb, nt, nl = 0;
     while ((c = gechar()) != EOF) {
-        if (c == '\n') {
+        if (c == ' ') {
+            ++nb;
+        }
+        else if (c == '\t') {
+            ++nt;
+        }
+        else if (c == '\n') {
             ++nl;
         }
+        
     }
-    printf("Number line: %d\n", nl);
+    
+    printf("Number blanks: %d\nNumber tabs: %d\nNumber line: %d\n", nb, nt, nl);
     return 0;
 }
