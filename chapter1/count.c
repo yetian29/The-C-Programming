@@ -15,7 +15,7 @@ int main() {
     /*Line counting*/
     int c, nb, nt, nl;
     nb, nt, nl = 0;
-    while ((c = gechar()) != EOF) {
+    while ((c = getchar()) != EOF) {
         if (c == ' ') {
             ++nb;
         }
