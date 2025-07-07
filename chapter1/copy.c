@@ -37,7 +37,7 @@ int main() {
         else if (c == '\b')
             c = \b;
         else if (c == '\\')
-            c == \\;
+            c = \\;
         putchar(c);
     }
     return 0;    
