@@ -7,7 +7,7 @@ int main() {
         if (c == ' ')
             ++nb;
         else if (c == '\t')
-            ++nb;
+            ++nt;
         else if (c == '\n')
             ++nl;
     }
