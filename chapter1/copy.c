@@ -3,7 +3,7 @@
 int main() {
     int c, nb;
     nb = 0;
-    while (c = getchar() != EOF) {
+    while ((c = getchar()) != EOF) {
         if (c == ' ')
             ++nb;
         else 
