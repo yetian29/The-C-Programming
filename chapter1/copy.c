@@ -9,7 +9,7 @@ int main() {
         else 
             nb = 0;
         if (nb > 1)
-            c = '\0';
+            continue;
         putchar(c);
     }
     
