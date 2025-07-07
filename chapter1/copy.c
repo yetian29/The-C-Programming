@@ -31,7 +31,7 @@ This makes tabs and backspaces visible in an unambiguous way.
 #include <stdio.h>
 int main() {
     int c;
-    while ((c = getchar() != EOF) {
+    while ((c = getchar()) != EOF) {
         if (c == '\t')
             c = \t;
         else if (c == '\b')
