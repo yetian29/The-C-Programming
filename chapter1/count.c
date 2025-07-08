@@ -15,6 +15,13 @@ int main() {
             ++nt;
         else if (c == '\n')
             ++nl;
+        if (c == ' ' || c == '\t' || c == '\n') {
+            state = OUT;
+        else       
+            if (state == OUT)
+                ++nw;
+            state = IN;
+
     }
     printf("Number characters: %d\nNumber blanks: %d\nNumber tabs:%d\nNumber lines:%d\n",nc, nb, nt, nl);
     return 0;
