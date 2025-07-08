@@ -4,7 +4,7 @@
 #define OUT 0 /* outside a word */
 
 int main() {
-    int c, nc, nb, nt, nl, nw;
+    int c, nc, nb, nt, nl, nw, state;
     nc = nb = nt = nl = nw =  0;
     state = OUT;
     while ((c = getchar()) != EOF) {
