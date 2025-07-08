@@ -9,15 +9,18 @@ int main() {
     state = OUT;
     while ((c = getchar()) != EOF) {
         ++nc;   
-        if (c == ' ')
+        if (c == ' ') {
             ++nb;
             state = OUT;
-        else if (c == '\t')
+        }
+        else if (c == '\t') {
             ++nt;
             state = OUT;    
-        else if (c == '\n')
+        }
+        else if (c == '\n') {
             ++nl;
             state = OUT;
+        }
         else       
             if (state == OUT)
                 ++nw;
