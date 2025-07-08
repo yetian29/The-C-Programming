@@ -11,11 +11,12 @@ int main() {
         ++nc;   
         if (c == ' ')
             ++nb;
+            state = OUT;
         else if (c == '\t')
             ++nt;
+            state = OUT;    
         else if (c == '\n')
             ++nl;
-        if (c == ' ' || c == '\t' || c == '\n') 
             state = OUT;
         else       
             if (state == OUT)
