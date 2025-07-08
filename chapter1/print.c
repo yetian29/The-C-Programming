@@ -11,7 +11,7 @@ int main() {
     else { 
         putchar(c);
         if (state == OUT)
-            printf('\n');
+            printf("\n");
         state = IN;
     }       
     
