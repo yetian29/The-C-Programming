@@ -6,15 +6,15 @@ int main() {
   int c, state;
   state = OUT;
   while ((c = getchar()) != EOF) {
-    if (c == ' ' || c == '\t' || c == '\n')
+    if (c == ' ' || c == '\t' || c == '\n') {
+        if (state == IN)
+            putchat('\n');      
         state = OUT;
+    }
     else { 
-        putchar(c);
-        if (state == OUT)
-            printf("\n");
         state = IN;
+        putchar(c);
     }       
-    
   }
   return 0;
 }
