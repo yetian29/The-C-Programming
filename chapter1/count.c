@@ -15,7 +15,7 @@ int main() {
             ++nt;
         else if (c == '\n')
             ++nl;
-        if (c == ' ' || c == '\t' || c == '\n') {
+        if (c == ' ' || c == '\t' || c == '\n') 
             state = OUT;
         else       
             if (state == OUT)
