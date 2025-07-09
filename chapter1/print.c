@@ -52,7 +52,7 @@ int main() {
     putchar(c);
     
   }
-  printf("Length word\t Position word\n");
+  printf("Length word\tPosition word\n");
   for (i = 0; i < 100; ++i) {
     printf("%2d\t\t%2d", lword[i], i + 1);
   }
