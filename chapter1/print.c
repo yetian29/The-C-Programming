@@ -31,8 +31,8 @@ a vertical orientation is more challenging.
 #define IN 1 /* inside a word */
 
 int main() {
-  int c, length, state, i;
-  i = length = 0;
+  int c, length, state, i, nword; /* nword abbreviation numberword */
+  length = i = nword = 0;
   state = OUT;
   int lword[100]; /* lword abbreviation lengthword */
   for (i = 0; i < 100; ++i) {
@@ -40,6 +40,8 @@ int main() {
   }
   while ((c = getchar()) != EOF) {
     if (c == ' ' || c == '\t' || c == '\n') {
+      if (state == IN) 
+          ++nword;
       state = OUT;
       lword[i] = length; 
       ++i;
@@ -53,8 +55,8 @@ int main() {
     
   }
   printf("Length word\tPosition word\n");
-  for (i = 0; i < 100; ++i) {
-    printf("%2d\t\t%2d", lword[i], i + 1);
+  for (i = 0; i < nword; ++i) {
+      printf("%2d\t\t%2d", lword[i], i + 1);
   }
   return 0;
 }
