@@ -1,5 +1,5 @@
 /* Write a program that prints its input one word per line. */
-/*
+
 #include <stdio.h>
 #define OUT 0 /* outside word */
 #define IN 1 /* inside word */
@@ -20,9 +20,41 @@ int main() {
   }
   return 0;
 }
-*/
+
 /*
 Write a program to print a histogram of the lengths of words in its input.
 It is easy to draw the histogram with the bars horizontal; 
 a vertical orientation is more challenging.
 */
+#include <stdio.h>
+#define OUT 0 /* outside a word */
+#define IN 1 /* inside a word */
+
+int main() {
+  int c, length, state, i;
+  i = length = 0;
+  state = OUT;
+  int lword[100]; /* lword abbreviation lengthword */
+  for (i = 0; i < 100; ++i) {
+    lword[i] = 0;
+  }
+  while ((c = getchar()) != EOF) {
+    if (c == ' ' || c == '\t' || c == '\n') {
+      state = OUT;
+      lword[i] = length; 
+      ++i;
+      length = 0;     
+    }
+    else {
+      state = IN;
+      ++length;   
+    }
+    putchar(c);
+    
+  }
+  printf("Length word\t Position word\n");
+  for (i = 0; i < 100; ++i) {
+    printf("%2d\t\t%2d", lword[i], i + 1);
+  }
+  return 0;
+}
