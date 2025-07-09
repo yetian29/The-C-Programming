@@ -1,4 +1,4 @@
-/* Write a program that prints its input one word per line. */
+8/* Write a program that prints its input one word per line. */
 
 #include <stdio.h>
 #define OUT 0 /* outside word */
@@ -36,20 +36,21 @@ int main() {
   state = OUT;
   int lword[100]; /* lword abbreviation lengthword */
   for (i = 0; i < 100; ++i) {
-    lword[i] = 0;
+      lword[i] = 0;
   }
   while ((c = getchar()) != EOF) {
     if (c == ' ' || c == '\t' || c == '\n') {
-      if (state == IN) 
-          ++nword;
-      state = OUT;
-      lword[i] = length; 
-      ++i;
-      length = 0;     
+        if (state == IN) {
+            ++nword;
+            lword[i] = length; 
+            ++i;
+        }
+        state = OUT;      
+        length = 0;     
     }
     else {
-      state = IN;
-      ++length;   
+        state = IN;
+        ++length;   
     }
     putchar(c);
     
