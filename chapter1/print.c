@@ -56,7 +56,7 @@ int main() {
     
   }
   for (i = 0; i < nword; ++i) {
-      printf("Word%d length: %d\n", i + 1, lword[i]);
+      printf("Word%d length: **%d\n", i + 1, lword[i]);
   }
   return 0;
 }
