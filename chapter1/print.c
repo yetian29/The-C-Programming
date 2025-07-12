@@ -73,13 +73,15 @@ int main() {
     nc = max = line = 0; 
   
     while ((c == getchar()) != EOF) {
-        if (c != ' ' && c != '\t' && c != '\n')
+        if (c != ' ' && c != '\t' && c != '\n') {
             ++nc;
             copy(longest, c);
-        else if (c == '\n' && nc > max)
+        }
+        else if (c == '\n' && nc > max) {
             max = nc;
             ++line;
             nc = 0;
+        }
               
     }
   
