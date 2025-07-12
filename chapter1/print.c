@@ -60,3 +60,33 @@ int main() {
   }
   return 0;
 }
+
+
+/* Write  a program print longest line */
+#include <stdio.h>
+
+void copy(char destination, char source);
+
+int main() {
+    char longest[];
+    int c, nc, max, line;
+    nc = max = line = 0; 
+  
+    while ((c == getchar()) != EOF) {
+        if (c != ' ' && c != '\t' && c != '\n')
+            ++nc;
+            copy(longest, c);
+        else if (c == '\n' && nc > max)
+            max = nc;
+            ++line;
+            nc = 0;
+              
+    }
+  
+      printf("%s\n", longest);
+  return 0;
+}
+
+void copy(char destination[], char source) {
+  
+}
